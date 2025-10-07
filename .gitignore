@@ -1,3 +1,9 @@
 week1/Foto.jpg
 week1/Video.mp4
 week1/Audio.ogg
+week1/Audio.mp3
+compile_commands.json
+lab2/CMakeFiles
+lab2/cmake_install.cmake
+lab2/CMakeCache.txt
+.gitignore

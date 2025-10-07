@@ -6,3 +6,4 @@ compile_commands.json
 lab2/CMakeFiles
 lab2/cmake_install.cmake
 lab2/CMakeCache.txt
+.vscode/*

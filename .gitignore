@@ -7,3 +7,6 @@ lab2/CMakeFiles
 lab2/cmake_install.cmake
 lab2/CMakeCache.txt
 .vscode/*
+build/*
+lab2/.cache/*
+

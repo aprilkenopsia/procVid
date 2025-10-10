@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Laboratório 1</title>
+</head>
+<body>
+    <h2>1. Introdução</h2>
+    <p>Este relatório descreve o primeiro laboratório de <b>Processamento de Vídeo</b>, sendo uma introdução à biblioteca OpenCV. Os objetivos incluíram a configuração do ambiente, o carregamento de imagens de arquivos, a captura de vídeo via webcam e a gravação dos resultados em disco. Este documento detalha os procedimentos adotados e os resultados obtidos.</p>
+    <h2>2. Fundamentos Básicos</h2>
+    <p>O modelo de processamento de imagem e vídeo se baseia em um fluxo de Entrada/Saída (E/S). Este fluxo é composto por três etapas: entradas, processamento e saídas.</p>
+    <ul>
+        <li><b>Entradas (Inputs):</b> Corresponde à forma como o programa obtém os dados visuais, que podem vir de duas fontes principais: fontes ao vivo (câmeras) ou arquivos (imagens e vídeos).</li>
+        <li><b>Processamento (Processing):</b> Etapa em que o programa, utilizando a biblioteca OpenCV, atua sobre os dados de entrada, podendo aplicar e filtros e realizar transformações.</li>
+        <li><b>Saídas (Outputs):</b> Destino dos dados após o processamento, que pode ser a exibição em tela (monitor) ou a gravação em um novo arquivo de imagem ou vídeo.</li>
+    </ul>
+    <p>As atividades do laboratório foram executadas para implementar diferentes combinações deste fluxo.</p>
+    <h2>3. Métodos</h2>
+    <ul>
+        <li><b>Parte 1, Preparação do Ambiente:</b> A primeira etapa consistiu na configuração do ambiente de desenvolvimento. O procedimento seguiu o guia L1_parte1_instalar_opencv_v25.txt, que orientou a instalação de dependências e a compilação da biblioteca OpenCV a partir do código-fonte.</li>
+        <li><b>Parte 2, Estudo do Processamento Básico:</b> Nesta etapa, foram estudados os programas de exemplo para as operações de E/S.</li>
+        <ul>
+            <li><b>(A) Leitura de Imagem:</b> Utilizando o tutorial <a href="https://docs.opencv.org/4.x/db/df5/tutorial_linux_gcc_cmake.html">Using OpenCV with gcc and CMake</a> o programa de exibição de imagem foi compilado e executado para carregar e exibir o arquivo messi5.jpg.</li>
+            <li><b>(B) Leitura e Gravação de Vídeo:</b> Os cinco programas em C++ do tutorial <a href="https://opencv.org/blog/reading-and-writing-videos-using-opencv/">Reading and Writing Videos using OpenCV</a> foram compilados e executados para análise de suas funcionalidades.</li>
+        </ul>
+        <li><b>Parte 3, Obtenção de Fotos e Vídeos:</b> A terceira parte focou na aplicação dos conceitos estudados para a geração de arquivos de mídia.</li>
+        <ul>
+            <li><b>Captura de Foto:</b> O programa <a href="https://github.com/aprilkenopsia/procVid/blob/f76d3f4b3120d47388eb6e8edaf7310416e75de6/lab1/Parte2%20B/video_write_from_webcam/video_write_from_webcam.cpp" target="_blank"><b>video_write_from_webcam.cpp</b></a> foi modificado para que a captura fosse de uma única imagem, e não de uma sequencia de frames, gerando o programa <a href="https://github.com/aprilkenopsia/procVid/blob/f76d3f4b3120d47388eb6e8edaf7310416e75de6/lab1/Parte2%20B/img_write_from_webcam/img_write_from_webcam.cpp"><b>img_write_from_webcam.cpp</b></a>. Ao pressionar “q”, o frame atual do vídeo era salvo como um arquivo de imagem.</li>
+            <li><b>Gravação de Vídeos:</b> Foi utilizado o programa <a href="https://github.com/aprilkenopsia/procVid/blob/f76d3f4b3120d47388eb6e8edaf7310416e75de6/lab1/Parte2%20B/video_write_from_webcam/video_write_from_webcam.cpp" target="_blank"><b>video_write_from_webcam.cpp</b></a>, estudado na Parte 2, sem modificações, para gravar os quatro vídeos solicitados.</li>
+        </ul>
+    </ul>
+    <h2>4. Resultados e Análises</h2>
+    <p>Esta seção apresenta os resultados obtidos com os procedimentos descritos.</p>
+    <h3>4.1. Resultados do Estudo Básico (Parte 2)</h3>
+    <ul>
+        <li><b>Análise dos Programas de Vídeo:</b> A análise dos cinco programas resultou na seguinte descrição de suas funções e aplicações:</li>
+        <ul>
+            <li><a href="https://github.com/aprilkenopsia/procVid/blob/f76d3f4b3120d47388eb6e8edaf7310416e75de6/lab1/Parte2%20B/video_read_from_file/video_read_from_file.cpp" target="_blank"><b>video_read_from_file.cpp</b></a>: Lê e exibe um vídeo a partir de um arquivo. Aplicação: base para análise de vídeos pré-gravados.</li>
+            <li><a href="https://github.com/aprilkenopsia/procVid/blob/f76d3f4b3120d47388eb6e8edaf7310416e75de6/lab1/Parte2%20B/video_read_from_image_sequence/video_read_from_image_sequence.cpp" target="_blank"><b>video_read_from_image_sequence.cpp</b></a>: Cria um vídeo a partir de uma sequência de imagens. Aplicação: criação de timelapses e animações.</li>
+            <li><a href="https://github.com/aprilkenopsia/procVid/blob/f76d3f4b3120d47388eb6e8edaf7310416e75de6/lab1/Parte2%20B/video_read_from_webcam/video_read_from_webcam.cpp" target="_blank"><b>video_read_from_webcam.cpp</b></a>: Captura e exibe o vídeo de uma webcam em tempo real. Aplicação: base para sistemas interativos.</li>
+            <li><a href="https://github.com/aprilkenopsia/procVid/blob/f76d3f4b3120d47388eb6e8edaf7310416e75de6/lab1/Parte2%20B/video_write_from_webcam/video_write_from_webcam.cpp" target="_blank"><b>video_write_from_webcam.cpp</b></a>: Captura, exibe e salva o vídeo de uma webcam. Aplicação: software de gravação.</li>
+            <li><a href="https://github.com/aprilkenopsia/procVid/blob/f76d3f4b3120d47388eb6e8edaf7310416e75de6/lab1/Parte2%20B/video_write_to_file/video_write_to_file.cpp" target="_blank"><b>video_write_to_file.cpp</b></a>: Lê um vídeo de um arquivo e salva em outro. Aplicação: conversão de formato ou salvamento de resultados após processamento.</li>
+        </ul>
+    </ul>
+    <h3>4.2. Mídias Capturadas (Parte 3)</h3>
+    <p>Os métodos da Parte 3 resultaram na criação dos seguintes arquivos.</p>
+    <ul>
+        <li><b>Imagens:</b></li>
+        <ul>
+            <li>Foto do grupo</li>
+            <img src="https://raw.githubusercontent.com/aprilkenopsia/procVid/refs/heads/lab1/lab1/Parte3/fotogrupo.jpg" alt="Foto do grupo">
+            <li>Avatares</li>
+            <img src="https://raw.githubusercontent.com/aprilkenopsia/procVid/refs/heads/lab1/lab1/Parte3/avatares.png" alt="Montagem dos avatares" style="max-width:600px; height:auto;">
+        </ul>
+        <li><b>Vídeos Gravados:</b></li>
+        <ul>
+            <li>Pessoa Lento</li>
+            <video controls>
+                <source src="https://raw.githubusercontent.com/aprilkenopsia/procVid/refs/heads/lab1/lab1/Parte3/pessoalento.mp4" type="video/mp4">
+                Seu navegador não suporta o elemento de vídeo.
+            </video>
+            <li>Pessoa Rápido</li>
+            <video controls>
+                <source src="https://raw.githubusercontent.com/aprilkenopsia/procVid/refs/heads/lab1/lab1/Parte3/pessoarapido.mp4" type="video/mp4">
+                Seu navegador não suporta o elemento de vídeo.
+            </video>
+            <li>Objeto Lento</li>
+            <video controls>
+                <source src="https://raw.githubusercontent.com/aprilkenopsia/procVid/refs/heads/lab1/lab1/Parte3/objetolento.mp4" type="video/mp4">
+                Seu navegador não suporta o elemento de vídeo.
+            </video>
+            <li>Objeto Rápido</li>
+            <video controls>
+                <source src="https://raw.githubusercontent.com/aprilkenopsia/procVid/refs/heads/lab1/lab1/Parte3/objetorapido.mp4" type="video/mp4">
+                Seu navegador não suporta o elemento de vídeo.
+            </video>
+        </ul>
+    </ul>
+    <h2>5. Conclusão</h2>
+    <p>Conclui-se que os objetivos do laboratório foram atingidos, uma vez que a equipe adquiriu a capacidade de configurar o ambiente OpenCV, carregar e salvar arquivos de imagem, e capturar e gravar vídeos. Este relatório documenta os procedimentos e pode ser utilizado como referência futura.</p>
+    <h2>6. Referências</h2>
+    <p><b>Using OpenCV with gcc and CMake</b>. OpenCV 4.x Tutorials. Disponível em: <a href="https://docs.opencv.org/4.x/db/df5/tutorial_linux_gcc_cmake.html">https://docs.opencv.org/4.x/db/df5/tutorial_linux_gcc_cmake.html</a></p>
+    <p><b>Reading and Writing Videos using OpenCV</b>. LearnOpenCV.com, 2021. Disponível em: <a href="https://opencv.org/blog/reading-and-writing-videos-using-opencv/">https://opencv.org/blog/reading-and-writing-videos-using-opencv/</a></p>
+</body>
+</html>
